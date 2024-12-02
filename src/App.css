@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+styles.css
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header Styles */
+h2 {
+  color: #cb8484;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Main container */
+.ui.main {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Input styles */
+.field {
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #61dafb;
+}
+
+/* Button styles */
+.ui.button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ui.button.blue {
+  background-color: #61dafb;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.ui.button.blue:hover {
+  background-color: #21a1f1;
 }
 
-@keyframes App-logo-spin {
+/* Contact card styles */
+.item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-3px);
+}
+
+.ui.avatar.image {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Icon styles */
+.trash.icon {
+  margin-left: auto;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.trash.icon:hover {
+  color: red;
+}
+
+/* Animation for adding a contact */
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+      opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+      opacity: 1;
+  }
+}
+
+/* Apply animation to the main container */
+.ui.main {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Contact list styles */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .ui.main {
+      width: 90%;
+      margin: 20px auto;
   }
 }

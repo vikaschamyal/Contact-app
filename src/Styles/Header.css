@@ -1,0 +1,24 @@
+/* Header.css */
+
+/* Header styles */
+.header {
+    text-align: center;
+    font-size: 1.5rem; /* Adjust font size as needed */
+    font-weight: bold;
+    color: #ffffff; /* Text color */
+    background-color: #702ce7; /* Background color */
+    padding: 20px; /* Padding around the header */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5); /* Shadow for depth */
+    animation: glow 1.5s infinite alternate; /* Animation for glow effect */
+}
+
+/* Glowing effect animation */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #61dafb, 0 0 10px #61dafb, 0 0 15px #21a1f1, 0 0 20px #21a1f1, 0 0 25px #21a1f1;
+    }
+    100% {
+        text-shadow: 0 0 10px #61dafb, 0 0 20px #61dafb, 0 0 30px #21a1f1, 0 0 40px #21a1f1, 0 0 50px #21a1f1;
+    }
+}
